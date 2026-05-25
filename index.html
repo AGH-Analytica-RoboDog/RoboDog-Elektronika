@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-width=1.0">
+    <title>Wizualizacja RoboDog - Integracja Sprzętowa</title>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+    <style>
+        body { 
+            margin: 0; 
+            padding: 0; 
+            background-color: #e0e0e0; /* Szary, profesjonalny kolor tła */
+            font-family: Arial, sans-serif;
+            height: 100vh;
+        }
+        /* Rozciągnięcie modelu na pełny ekran */
+        model-viewer { 
+            width: 100%; 
+            height: 100%; 
+            outline: none;
+        }
+        .header {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h2>Projekt RoboDog - Architektura</h2>
+        <p>Przeciągnij, aby obrócić. Scroll, aby przybliżyć.</p>
+    </div>
+
+    <model-viewer 
+        src="Robodog.glb" 
+        auto-rotate 
+        camera-controls 
+        shadow-intensity="1.5" 
+        environment-image="neutral"
+        exposure="1">
+    </model-viewer>
+
+</body>
+</html>
